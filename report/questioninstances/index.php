@@ -45,6 +45,9 @@ foreach ($qtypes as $qtype) {
     $qtypechoices[$qtype->name()] = $qtype->local_name();
 }
 
+// Sort by label.
+asort($qtypechoices, SORT_NATURAL | SORT_FLAG_CASE);
+
 // Print the settings form.
 echo $OUTPUT->box_start('generalbox boxwidthwide boxaligncenter centerpara');
 echo '<form method="get" action="." id="settingsform"><div>';
